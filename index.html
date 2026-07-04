@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 – Fundamentos da Web Dinâmica - Seu Nome</title>
-  <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Seu Nome Completo. Página inicial do projeto de introdução aos fundamentos de HTML, CSS e JavaScript.">
-  <meta name="author" content="Seu Nome Completo">
+  <title>WDD 131 – Fundamentos da Web Dinâmica - Vinicius Chuman</title>
+  <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Vinicius Chuman. Página pessoal com informações sobre mim e recursos úteis de desenvolvimento web.">
+  <meta name="author" content="Vinicius Chuman">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -15,44 +15,57 @@
 <body>
 
   <header>
-    <span class="logo">WDD 131</span>
+    <span class="logo" id="course-title">WDD 131 – Fundamentos da Web Dinâmica</span>
     <nav>
       <ul>
-        <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank" rel="noopener">Escritura Favorita</a></li>
+        <li><a href="https://www.linkedin.com/in/vinicius-chuman-a1803b101" target="_blank" rel="noopener">Perfil LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Instructure</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank" rel="noopener">Escritura</a></li>
         <li><a href="projeto-final/index.html">Projeto Final</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Seu Nome</h1>
+    <h1>Vinicius Chuman</h1>
 
-    <section class="card">
-      <h2>Fundamentos de HTML</h2>
-      <img src="imagens/html-icone.png" alt="Ícone representando o HTML" width="120" height="120">
-      <p>
-        Nesta etapa do curso, aprendi sobre a estrutura de um documento HTML,
-        incluindo o uso correto de elementos como <code>header</code>, <code>main</code>,
-        <code>footer</code> e <code>nav</code>, além da importância das metatags para
-        acessibilidade e SEO.
-      </p>
+    <section class="card card-sobre">
+      <h2>Sobre mim</h2>
+      <div class="sobre-conteudo">
+        <div class="sobre-texto">
+          <p>
+            Meu nome é Vinicius Chuman. Sou de São Paulo, SP, e atualmente trabalho como
+            estagiário de T.I. (suporte) em um colégio judaico. Sou casado e tenho 32 anos,
+            e uma filha a caminho. Gosto de praticar esportes, jogar video game, acompanhar
+            filmes e me aprofundar em tecnologia — incluindo programação e desenvolvimento web.
+          </p>
+          <p class="localizacao"><strong>São Paulo, Brasil</strong></p>
+          <div class="estado-info">
+            <img src="imagens/bandeira_sp.png" alt="Bandeira do estado de São Paulo" width="90" height="60">
+            <p>
+              São Paulo é o estado mais populoso do Brasil, principal centro financeiro e
+              cultural do país, conhecido por sua diversidade e intensa vida urbana.
+            </p>
+          </div>
+        </div>
+        <img class="foto-perfil" src="imagens/perfil.jpg" alt="Foto de Vinicius Chuman" width="180" height="220">
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Fundamentos de CSS</h2>
-      <img src="imagens/css-icone.png" alt="Ícone representando o CSS" width="120" height="120">
-      <p>
-        Explorei conceitos de layout moderno com Flexbox e CSS Grid, aplicando boas
-        práticas de alinhamento, contraste de cores, proximidade e repetição para
-        criar uma interface visualmente consistente e responsiva.
-      </p>
+    <section class="card card-recursos">
+      <h2>Recursos Web Dev</h2>
+      <ul class="lista-recursos">
+        <li><a href="https://dev.to/" target="_blank" rel="noopener">Comunidade Dev.to</a></li>
+        <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+        <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="anoatual"></span> Seu Nome | Seu Estado, Brasil</p>
+    <p>&copy; <span id="anoatual"></span> Vinicius Chuman - São Paulo - Brasil</p>
     <p id="ultimaModificacao"></p>
   </footer>
 

@@ -1,17 +1,18 @@
-/* ===== Variáveis de esquema de cores e tipografia ===== */
+
 :root {
-  --cor-primaria: #1b4332;
-  --cor-secundaria: #2d6a4f;
-  --cor-destaque: #74c69d;
+  --cor-primaria: #1b2a4a;
+  --cor-nav: #14141a;
+  --cor-secundaria: #2d3f6b;
+  --cor-destaque: #4a6fa5;
   --cor-fundo: #f8f9fa;
   --cor-texto: #1d1d1d;
   --cor-branco: #ffffff;
+  --cor-borda: #e0e0e0;
 
   --fonte-titulo: "Poppins", sans-serif;
   --fonte-corpo: "Open Sans", sans-serif;
 }
 
-/* ===== Reset básico ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,69 +36,66 @@ a {
   text-decoration: none;
 }
 
-/* ===== Header ===== */
 header {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
-  padding: 1rem 1.5rem;
 }
 
 header .logo {
   display: block;
   text-align: center;
   font-family: var(--fonte-titulo);
-  font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 2px;
-  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 1.5rem;
 }
 
-/* ===== Navegação com Flexbox ===== */
+nav {
+  background-color: var(--cor-nav);
+}
+
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-around;
 }
 
 nav a {
+  display: block;
+  color: var(--cor-branco);
   font-weight: 600;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover,
 nav a:focus {
   background-color: var(--cor-destaque);
-  color: var(--cor-primaria);
+  color: var(--cor-branco);
 }
 
-/* ===== Main ===== */
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 2rem auto;
   padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 main > h1 {
   font-family: var(--fonte-titulo);
   color: var(--cor-primaria);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* ===== Cards em CSS Grid ===== */
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   main {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
   }
   main > h1 {
     grid-column: 1 / -1;
@@ -106,26 +104,79 @@ main {
 
 .card {
   background-color: var(--cor-branco);
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .card h2 {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
   font-family: var(--fonte-titulo);
-  color: var(--cor-secundaria);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.sobre-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.sobre-texto {
+  flex: 1 1 300px;
+}
+
+.sobre-texto p {
+  font-size: 0.95rem;
   margin-bottom: 1rem;
 }
 
-.card img {
-  margin: 0 auto 1rem auto;
+.localizacao {
+  text-align: center;
 }
 
-.card p {
+.estado-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.estado-info img {
+  flex-shrink: 0;
+  border: 1px solid var(--cor-borda);
+}
+
+.foto-perfil {
+  flex: 0 0 180px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--cor-borda);
+}
+
+.lista-recursos {
+  list-style: disc;
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+}
+
+.lista-recursos li {
+  margin-bottom: 0.6rem;
   font-size: 0.95rem;
 }
 
-/* ===== Footer ===== */
+.lista-recursos a {
+  color: var(--cor-destaque);
+  text-decoration: underline;
+}
+
+.lista-recursos a:hover {
+  color: var(--cor-primaria);
+}
+
 footer {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
