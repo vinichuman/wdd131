@@ -1,0 +1,41 @@
+/* ===== Estilo para telas maiores (min-width: 700px) ===== */
+
+@media screen and (min-width: 700px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .titulo-album {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  /* Hambúrguer só aparece em telas pequenas */
+  #hamburger {
+    display: none;
+  }
+
+  /* Nav sempre visível em telas grandes */
+  #nav-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  #nav-menu ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  /* Cartões de templo em grade responsiva */
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  main > h1 {
+    grid-column: 1 / -1;
+  }
+}

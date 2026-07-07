@@ -1,0 +1,146 @@
+/* ===== Mobile-first: estilo base do Álbum de Templos ===== */
+
+:root {
+  --cor-primaria: #1b2a4a;
+  --cor-secundaria: #2d3f6b;
+  --cor-destaque: #4a6fa5;
+  --cor-fundo: #f8f9fa;
+  --cor-texto: #1d1d1d;
+  --cor-branco: #ffffff;
+  --cor-borda: #d7dde5;
+
+  --fonte-titulo: "Poppins", sans-serif;
+  --fonte-corpo: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.titulo-album {
+  display: block;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* Botão hambúrguer: visível por padrão (mobile) */
+#hamburger {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--cor-branco);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Menu de navegação escondido até o hambúrguer ser clicado */
+#nav-menu {
+  display: none;
+  margin-top: 1rem;
+}
+
+#nav-menu.open {
+  display: block;
+}
+
+#nav-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#nav-menu a {
+  display: block;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nav-menu a:hover,
+#nav-menu a:focus {
+  background-color: var(--cor-destaque);
+  color: var(--cor-branco);
+}
+
+/* ===== Main ===== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+main > h1 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Figures ===== */
+figure {
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+figcaption {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  color: var(--cor-primaria);
+  text-align: center;
+  padding: 0.75rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
