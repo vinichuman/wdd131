@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Itália - Vinicius Chuman</title>
+  <meta name="description" content="WDD 131 – Página sobre a Itália. Vinicius Chuman. Informações, clima e curiosidades sobre a Itália.">
+  <meta name="author" content="Vinicius Chuman">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/local.css">
+  <script src="scripts/local.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <span class="logo">🇮🇹 Itália</span>
+  </header>
+
+  <main>
+    <picture class="imagem-principal">
+      <source srcset="images/italia-largo.webp" media="(min-width: 700px)">
+      <img src="images/italia.webp" alt="Bandeira da Itália" width="700" height="400">
+    </picture>
+
+    <section class="info-rapida">
+      <h1>Itália</h1>
+      <ul>
+        <li><strong>Capital:</strong> Roma</li>
+        <li><strong>População:</strong> ~59 milhões</li>
+        <li><strong>Idioma oficial:</strong> Italiano</li>
+        <li><strong>Formação do país:</strong> 17 de março de 1861</li>
+      </ul>
+    </section>
+
+    <section class="sobre">
+      <h2>Sobre</h2>
+      <p>
+        A Itália é um país no sul da Europa, conhecido por sua rica história, arte renascentista,
+        arquitetura antiga e culinária mundialmente famosa. De Roma a Veneza, passando pela Toscana
+        e pela costa de Cinque Terre, o país reúne alguns dos patrimônios culturais mais visitados
+        do mundo. É também o lar do Vaticano, o menor Estado soberano do planeta.
+      </p>
+    </section>
+
+    <section class="clima">
+      <h2>Clima<span class="icone-clima" aria-hidden="true"></span></h2>
+      <img class="icone-clima-mobile" src="images/icone_clima.png" alt="Ícone representando tempo parcialmente nublado" width="48" height="48">
+      <p>Temperatura: <span id="temperatura"></span> °C</p>
+      <p>Vento: <span id="vento"></span> km/h</p>
+      <p>Sensação térmica: <span id="sensacao-termica"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="anoatual"></span> Vinicius Chuman - São Paulo - Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
+
+</body>
+</html>
